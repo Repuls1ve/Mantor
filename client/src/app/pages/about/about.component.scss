@@ -1,0 +1,220 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.blurred {
+  filter: blur(3px);
+}
+
+.presentation {
+  width: 100%;
+  background: radial-gradient(
+    53.88% 97% at 50% 48.5%,
+    #2e4151 0%,
+    #010007 100%
+  );
+  .presentation-content {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 55px;
+
+    h2 {
+      color: white;
+      margin-bottom: 10px;
+      font-weight: bold;
+      line-height: 58.85px;
+
+      @include breakpoints.custom(768px) {
+        font-size: 2rem;
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      padding-left: 35px;
+      border-left: 16px solid rgba(255, 255, 255, 0.3);
+
+      p {
+        color: white;
+        font-size: 1.4rem;
+        line-height: 29.43px;
+        font-family: base.$secondary-italic-font-family;
+        font-weight: normal;
+
+        @include breakpoints.custom(768px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.experience {
+  background-color: white;
+
+  .experience-content {
+    padding: 40px;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .experience-description {
+      font-size: 1.3rem;
+      font-family: base.$secondary-italic-font-family;
+      font-weight: normal;
+      padding-left: 35px;
+      border-left: 16px solid rgba(31, 51, 65, 0.4);
+    }
+
+    .advantages {
+      display: flex;
+      flex-wrap: wrap;
+
+      .example {
+        flex-basis: 20%;
+
+        .image-container {
+          display: flex;
+          align-items: flex-end;
+          height: 130px;
+          margin-bottom: 25px;
+        }
+
+        p {
+          text-align: left;
+          font-family: base.$secondary-italic-font-family;
+        }
+      }
+
+      @include breakpoints.md {
+        .example {
+          flex-basis: calc(100% / 3);
+        }
+      }
+
+      @include breakpoints.custom(700px) {
+        .example {
+          flex-basis: calc(100% / 2);
+        }
+      }
+
+      @include breakpoints.xs {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.mission {
+  width: 100%;
+  background-image: url("/assets/images/mission-background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 486px;
+
+  .mission-content {
+    padding: 40px;
+
+    h2 {
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      padding-left: 35px;
+      border-left: 16px solid rgba(255, 255, 255, 0.3);
+
+      p {
+        color: white;
+        font-size: 1.4rem;
+        line-height: 29.43px;
+        font-family: base.$secondary-italic-font-family;
+        font-weight: normal;
+
+        @include breakpoints.custom(768px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @include breakpoints.custom(500px) {
+    height: auto;
+  }
+
+  @include breakpoints.md {
+    background-size: cover;
+  }
+}
+
+.technologies {
+  width: 100%;
+  background: radial-gradient(
+    53.88% 97% at 50% 48.5%,
+    #2e4151 0%,
+    #010007 100%
+  );
+
+  .technologies-content {
+    padding: 40px;
+
+    h2 {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    p {
+      padding-left: 35px;
+      margin-top: 20px;
+      color: white;
+      font-size: 1.4rem;
+      line-height: 29.43px;
+      font-family: base.$secondary-italic-font-family;
+      font-weight: normal;
+      border-left: 16px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .examples {
+      display: flex;
+      justify-content: space-around;
+
+      .example {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 30%;
+        height: 440px;
+
+        h3 {
+          font-family: base.$secondary-font-family;
+          color: white;
+          margin: 20px 0 10px;
+        }
+      }
+
+      @include breakpoints.custom(1150px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .example {
+          flex-basis: 45%;
+        }
+      }
+
+      @include breakpoints.custom(750px) {
+        flex-direction: column;
+      }
+
+      @include breakpoints.xs {
+        .example img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

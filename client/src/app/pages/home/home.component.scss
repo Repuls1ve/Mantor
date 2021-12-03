@@ -1,0 +1,124 @@
+@use "../../../assets/scss/breakpoints";
+@use "../../../assets/scss/base";
+
+$background-desktop: 100%;
+$background-tablet: 65%;
+$background-mobile: 30%;
+
+$logo-desktop: 441px;
+$logo-tablet: 363px;
+$logo-mobile: 205px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  .background {
+    display: flex;
+    background-image: url("/assets/images/home-background.png");
+    width: 100%;
+    flex-basis: $background-desktop;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoints.md {
+      flex-basis: $background-tablet;
+    }
+    @include breakpoints.xs {
+      flex-basis: $background-mobile;
+    }
+
+    .logo {
+      position: absolute;
+      left: 50%;
+      top: calc($background-desktop / 2);
+      transform: translate(-50%, calc($background-desktop / -2));
+      width: $logo-desktop;
+      height: auto;
+
+      @include breakpoints.md {
+        width: $logo-tablet;
+        top: calc($background-tablet / 2.5);
+        transform: translate(-50%, calc($background-tablet / -2.5));
+      }
+      @include breakpoints.xs {
+        width: $logo-mobile;
+        top: calc($background-mobile / 3);
+        transform: translate(-50%, calc($background-mobile / -3));
+      }
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-bottom: 160px;
+      height: 400px;
+
+      a {
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.5rem;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    }
+
+    @include breakpoints.xs {
+      flex-direction: column;
+
+      ul {
+        width: 100%;
+        align-items: center;
+      }
+    }
+
+    @include breakpoints.md {
+      justify-content: space-around;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 0;
+        height: 100%;
+      }
+    }
+
+    @include breakpoints.custom(1024px) {
+      .left a {
+        text-align: left;
+      }
+      .right a {
+        text-align: right;
+      }
+    }
+
+    @include breakpoints.lg {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
+  .filler {
+    display: flex;
+    flex: 1;
+    background-color: base.$color-primary-dark;
+  }
+}

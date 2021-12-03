@@ -1,0 +1,33 @@
+<footer>
+    <nav *ngIf="media.isActive('gt-sm')">
+        <ul>
+            <a>О компании</a>
+            <a>Каталог</a>
+            <a>Стать партнёром</a>
+            <a>Партнёры</a>
+            <a>Сервисные центры</a>
+            <a>Гарантии</a>
+            <a>Контакты</a>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="group" [class.extended]="media.isActive('lt-md')">
+            <div>
+                <img class="logo" src="/assets/images/company-name.png" alt="logo">
+                <p>Зарегистрированный товарный знак</p>
+            </div>
+            <a *ngIf="media.isActive('lt-md')" class="scroll-top">Наверх</a>
+        </div>
+        <div class="group">
+            <h2>ООО «Тим Групп»</h2>
+            <p>Официальный дистрибьютор на территории России</p>
+        </div>
+        <div class="group">
+            <h2>+ 7(351)217-16-67</h2>
+            <p>Челябинск, ул. Куйбышева 1А, оф. 2 tim@mantor.pro</p>
+        </div>
+        <div *ngIf="media.isActive('gt-sm')" class="group">
+            <a class="scroll-top">Наверх</a>
+        </div>
+    </div>
+</footer>

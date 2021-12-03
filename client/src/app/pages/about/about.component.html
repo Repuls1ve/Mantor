@@ -1,0 +1,88 @@
+<app-header (onSidebarToggle)="onSidebarToggle($event)"></app-header>
+<div class="content" [class.blurred]="blurActive">
+    <section class="presentation">
+        <div class="presentation-content">
+            <h2>MANTOR — коллаборация качества, <br *ngIf="media.isActive('lt-md')"> цены и технологии <br *ngIf="media.isActive('gt-sm')"> в сфере <br *ngIf="media.isActive('lt-md')"> запасных частей</h2>
+            <div class="description">
+                <p>Торговая марка MANTOR была образована в 2015 году. У нашей компании заключено ряд контрактов с лучшими производственными линиями на различных производствах в Китае.<br><br></p>
+                <p>На мировом рынке большая часть АНАЛОГОВ упакованы в белые коробки или не имеют названия. У таких деталей непонятное качество, неизвестный производитель и нет гарантии в России.</p>
+            </div>
+        </div>
+    </section>
+    <section class="experience">
+        <div class="experience-content">
+            <h2>Многолетний опыт MANTOR</h2>
+            <p class="experience-description">Готовы предоставить Вам торговую марку MANTOR. Мы постоянно <br *ngIf="media.isActive('lt-md')">работаем над улучшением качества продукции</p>
+            <div class="advantages">
+                <div class="example">
+                    <div class="image-container">
+                        <img src="/assets/images/example-1.png" alt="example">
+                    </div>
+                    <p>Выбрали только лучшие производства в Китае</p>
+                </div>
+                <div class="example">
+                    <div class="image-container">
+                        <img src="/assets/images/example-2.png" alt="example">
+                    </div>
+                    <p>Проверили оборудование на соответствие стандартам качества</p>
+                </div>
+                <div class="example">
+                    <div class="image-container">
+                        <img src="/assets/images/example-3.png" alt="example">
+                    </div>
+                    <p>Нашли производителей всех комплектующих</p>
+                </div>
+                <div class="example">
+                    <div class="image-container">
+                        <img src="/assets/images/example-4.png" alt="example">
+                    </div>
+                    <p>Вложились в дополнительное обучение персонала</p>
+                </div>
+                <div class="example">
+                    <div class="image-container">
+                        <img src="/assets/images/example-5.png" alt="example">
+                    </div>
+                    <p>Ввели двухуровневый контроль качества готовой продукции</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <div class="mission-content">
+            <h2>Миссия</h2>
+            <div class="description">
+                <p>Торговая марка MANTOR позиционируется как качественный продукт по доступной цене. Объединив свои возможности со своим опытом<br><br></p>
+                <p>Мы можем добиться улучшения нашего качества жизни и новых достижений в работе.<br><br></p>
+                <p>Меняем мир к лучшему вместе.</p>
+            </div>
+        </div>
+    </section>
+    <section class="technologies">
+        <div class="technologies-content">
+            <h2>Технологии</h2>
+            <p>Под торговой маркой MANTOR Вы можете встретить:</p>
+            <div class="examples">
+                <div class="example">
+                    <h3>Топливные инжекторы Common Rail</h3>
+                    <div class="image-container">
+                        <img src="/assets/images/tech-example-1.png">
+                    </div>
+                </div>
+                <div class="example">
+                    <h3>Насосы высокого и низкого давления (ТННД, ТНВД)</h3>
+                    <div class="image-container">
+                        <img src="/assets/images/tech-example-2.png">
+                    </div>
+                </div>
+                <div class="example">
+                    <h3>Запасные части на двигатель ЯМЗ</h3>
+                    <div class="image-container">
+                        <img src="/assets/images/tech-example-3.png">
+                    </div>
+                </div>
+            </div>
+            <p>Как отмечают сотрудники сервисных центров, данные запчасти не уступают оригинальной продукции. Они имеют высокие характеристики в соответствии с мировыми стандартами.<br><br>Вся продукция сертифицирована.</p>
+        </div>
+    </section>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,10 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.blurred {
+  filter: blur(3px);
+}
+
+.heading {
+  padding: 30px 40px 15px;
+}

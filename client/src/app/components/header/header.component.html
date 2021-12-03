@@ -1,0 +1,34 @@
+<header>
+    <div class="background">
+        <div class="logo-container">
+            <img class="logo" src="/assets/images/logo-alt.png" alt="logo">
+            <img
+            *ngIf="media.isActive('lt-md')"
+            class="toggle"
+            (click)="toggleSidebar()"
+            [src]="icon"
+            alt="menu-toggle"
+            >
+        </div>
+        <nav
+        *ngIf="media.isActive('gt-sm') || media.isActive('lt-md') && sidebarOpen"
+        [ngClass]="{
+            'nav-wrapper': media.isActive('gt-sm'),
+            'sidebar-wrapper': media.isActive('lt-md')
+        }">
+            <ul>
+                <a routerLink="/about" routerLinkActive="active">О компании</a>
+                <a routerLink="/catalog" routerLinkActive="active">Каталог</a>
+                <a>Стать партнёром</a>
+                <a>Где купить</a>
+                <a>Сервисные центры</a>
+                <a>Гарантии</a>
+                <a>Контакты</a>
+            </ul>
+            <div *ngIf="media.isActive('lt-md')" class="sidebar-footer">
+                <a href="tel:">+ 7 (351) 217-16-67</a>
+                <p>Челябинск, ул. Куйбышева 1А, оф. 2 tim@mantor.pro</p>
+            </div>
+        </nav>
+    </div>
+</header>

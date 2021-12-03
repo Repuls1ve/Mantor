@@ -1,0 +1,73 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.container {
+  .product-heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 40px;
+
+    h2 {
+      flex-basis: 30%;
+      font-family: base.$primary-font-family;
+      font-weight: normal;
+    }
+
+    img {
+      flex-basis: 40%;
+    }
+  }
+
+  .products-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .products-table {
+      margin: 0 40px;
+      flex-basis: calc(50% - 80px);
+      max-width: 830px;
+
+      h3 {
+        font-size: 1.35rem;
+        font-weight: normal;
+        margin-bottom: 7px;
+      }
+
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        width: 100%;
+
+        thead {
+          th {
+            padding-left: 7px;
+            border: 1px solid #b9b9b9;
+            background-color: #0000000d;
+            font-family: base.$secondary-font-family;
+            text-align: left;
+          }
+
+          th:nth-child(1) {
+            width: 30%;
+          }
+        }
+
+        tbody {
+          td {
+            padding: 18px 7px;
+            font-family: base.$secondary-font-family;
+            border: 1px solid #b9b9b9;
+            word-break: break-all;
+          }
+        }
+      }
+
+      @include breakpoints.lg {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

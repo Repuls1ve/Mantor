@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="background">
+        <img class="logo" src="/assets/images/logo.png" alt="logo">
+        <nav *ngIf="media.isActive('gt-sm')">
+            <ul class="left">
+                <a routerLink="/about">О компании</a>
+                <a>Каталог</a>
+                <a>Стать партнёром</a>
+            </ul>
+            <ul class="right">
+                <a>Сервисные центры</a>
+                <a>Где купить</a>
+                <a>Контакты</a>
+            </ul>
+        </nav>
+    </div>
+    <div *ngIf="media.isActive('lt-md')" class="filler">
+        <nav>
+            <ul>
+                <a routerLink="/about">О компании</a>
+                <a>Каталог</a>
+                <a>Стать партнёром</a>
+            </ul>
+            <ul>
+                <a>Сервисные центры</a>
+                <a>Где купить</a>
+                <a>Контакты</a>
+            </ul>
+        </nav>
+    </div>
+</div>

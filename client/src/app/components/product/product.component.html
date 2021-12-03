@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="product-heading">
+        <h2>{{title}}</h2>
+        <img>
+    </div>
+    <div class="products-content">
+        <div *ngFor="let item of vendorSorted" class="products-table">
+            <h3>{{item.vendor.name}}</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Артикул</th>
+                        <th>Применение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of item.products">
+                        <td>{{product.code}}</td>
+                        <td>{{product.applying}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@400;500&display=swap");
+
+@font-face {
+  font-family: "Century Gothic Regular";
+  src: url("../fonts/CenturyGothic.eot");
+  src: url("../fonts/CenturyGothic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/CenturyGothic.woff") format("woff"),
+    url("../fonts/CenturyGothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic Italic";
+  src: url("../fonts/CenturyGothic-Italic.eot");
+  src: url("../fonts/CenturyGothic-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/CenturyGothic-Italic.woff") format("woff"),
+    url("../fonts/CenturyGothic-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primary-font-family: "Fira Sans Extra Condensed", sans-serif;
+$secondary-font-family: "Century Gothic Regular", sans-serif;
+$secondary-italic-font-family: "Century Gothic Italic", sans-serif;
+
+$color-primary-dark: #010007;
+$color-primary-dark-neutral: #090c14;
+$color-primary-active: #6d818e;
