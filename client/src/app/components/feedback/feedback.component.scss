@@ -1,0 +1,29 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.feedback {
+  max-width: 1150px;
+  margin-top: 25px;
+  padding: 40px 20% 40px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0px 11px 35px rgba(0, 0, 0, 0.15);
+
+  h2 {
+    font-family: base.$primary-font-family;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-family: base.$secondary-font-family;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  @include breakpoints.md {
+    padding-right: 40px;
+  }
+}

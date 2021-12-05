@@ -1,0 +1,99 @@
+<app-header (onSidebarToggle)="onSidebarToggle($event)"></app-header>
+<div class="content" [class.blurred]="blurActive">
+    <main>
+        <div class="branches">
+            <div
+            class="shops"
+            [class.active]="branch === 'shops'"
+            (click)="onBranchSelect('shops')"
+            >
+                <h2>Для магазинов</h2>
+            </div>
+            <div
+            class="service-centres" 
+            [class.active]="branch === 'service-centers'"
+            (click)="onBranchSelect('service-centers')"
+            >
+                <h2>Для сервисных центров</h2>
+            </div>
+        </div>
+        <div class="advantages">
+            <div class="shops" *ngIf="branch === 'shops'">
+                <div class="heading">
+                    <h2>Преимущества магазинов —<br>партнёров MANTOR</h2>
+                    <p>Магазины, сотрудничающие с MANTOR, получают преимущества:</p>
+                </div>
+                <div class="content">
+                    <div class="advantage">
+                        <div class="img-container">
+                            <img src="/assets/images/shop-advantage-1.png">
+                        </div>
+                        <p>Сертификат дилера</p>
+                    </div>
+                    <div class="advantage">
+                        <div class="img-container">
+                            <img src="/assets/images/shop-advantage-2.png">
+                        </div>
+                        <p>Специальные цены на продукции</p>
+                    </div>
+                    <div class="advantage">
+                        <div class="img-container">
+                            <img src="/assets/images/shop-advantage-3.png">
+                        </div>
+                        <p>Продвижение и сопровождение</p>
+                    </div>
+                    <div class="advantage">
+                        <div class="img-container">
+                            <img src="/assets/images/shop-advantage-4.png">
+                        </div>
+                        <p>Оперативное выполнение гарантийных обязательств</p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-centers" *ngIf="branch === 'service-centers'">
+                <div class="heading">
+                    <h2>Преимущества сервисных центров MANTOR</h2>
+                    <p>Магазины, сотрудничающие с MANTOR, также получают преимущества:</p>
+                </div>
+                <div class="content">
+                    <div class="advantage">
+                        <div class="img-container">
+                            <img src="/assets/images/service-centers-advantage-1.png">
+                        </div>
+                    </div>
+                    <div class="descriptions">
+                        <ol>
+                            <li>Специальные условия на закупку запасных частей для ремонта форсунок</li>
+                            <li>Статус дилера</li>
+                            <li>Продвижение вашего сервисного центра</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="partnership-application">
+        <h2>Три шага для получения дилерского сертификата</h2>
+        <div class="steps">
+            <div class="step">
+                <h3 class="order">1</h3>
+                <p>Подать заявку и предоставить список оборудования для диагностики и ремонта форсунок Common Rail (с приложенными фотографиями рабочих мест)</p>
+            </div>
+            <div class="step">
+                <h3 class="order">2</h3>
+                <p>Заключить договор на выполнение послегарантийного ремонта форсунок системы Common Rail под товарным знаком MANTOR</p>
+            </div>
+            <div class="step">
+                <h3 class="order">3</h3>
+                <p>Заключить договор на поставку запасных частей для ремонта форсунок Common Rail с ООО «Тим Групп» и осуществлять закупку запасных </p>
+            </div>
+        </div>
+        <app-feedback>
+            <app-input placeholder="Имя"></app-input>
+            <app-input placeholder="Название организации"></app-input>
+            <app-input placeholder="Телефон"></app-input>
+            <button class="submit">Оставить заявку</button>
+        </app-feedback>
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -11,6 +11,9 @@ import { ProductComponent } from './components/product/product.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
+import { PartnershipComponent } from './pages/partnership/partnership.component';
+import { FeedbackComponent } from './components/feedback/feedback.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
     AboutComponent,
     FooterComponent,
     ProductComponent,
-    CatalogComponent
+    CatalogComponent,
+    PartnershipComponent,
+    FeedbackComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,

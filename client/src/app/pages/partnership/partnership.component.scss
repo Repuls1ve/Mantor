@@ -1,0 +1,205 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.blurred {
+  filter: blur(3px);
+}
+
+main {
+  margin-top: 10px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+
+.branches {
+  display: flex;
+
+  div {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    h2 {
+      font-family: base.$primary-font-family;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      padding-bottom: 5px;
+    }
+
+    &.active {
+      border-bottom: 5px solid black;
+    }
+  }
+}
+
+.advantages {
+  margin-top: 35px;
+
+  .shops {
+    .heading {
+      p {
+        margin-top: 15px;
+        border-left: 16px solid rgba(31, 51, 65, 0.4);
+        padding-left: 25px;
+        font-family: base.$secondary-font-family;
+        font-weight: normal;
+        font-size: 1.3rem;
+      }
+
+      @include breakpoints.xs {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .content {
+      margin-top: 35px;
+      display: flex;
+      flex-wrap: wrap;
+
+      .advantage {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 25%;
+
+        .img-container {
+          display: flex;
+          align-items: center;
+          height: 107px;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-family: base.$secondary-font-family;
+          font-weight: normal;
+          margin-bottom: 15px;
+        }
+
+        @include breakpoints.md {
+          flex-basis: 50%;
+
+          .img-container {
+            padding-left: 20%;
+          }
+        }
+
+        @include breakpoints.xs {
+          flex-basis: 100%;
+
+          .img-container {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .service-centers {
+    .heading {
+      p {
+        margin-top: 15px;
+        border-left: 16px solid rgba(31, 51, 65, 0.4);
+        padding-left: 25px;
+        font-family: base.$secondary-font-family;
+        font-weight: normal;
+        font-size: 1.3rem;
+      }
+
+      @include breakpoints.xs {
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .content {
+      margin-top: 35px;
+      display: flex;
+
+      li {
+        margin-left: 40px;
+        font-family: base.$secondary-font-family;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+      }
+
+      img {
+        max-width: 568px;
+        width: 100%;
+        height: auto;
+      }
+
+      @include breakpoints.md {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.partnership-application {
+  padding: 40px 3%;
+  background: radial-gradient(
+    53.88% 97% at 50% 48.5%,
+    #2e4151 0%,
+    #010007 100%
+  );
+
+  h2 {
+    color: white;
+  }
+
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+
+    .step {
+      display: flex;
+      flex-basis: calc(100% / 3);
+
+      .order {
+        font-size: 96px;
+        line-height: 100%;
+        color: white;
+      }
+
+      p {
+        padding: 10px 80px 10px 10px;
+        color: white;
+      }
+
+      @include breakpoints.md {
+        flex-basis: 50%;
+
+        p {
+          padding-right: 20px;
+        }
+      }
+
+      @include breakpoints.xs {
+        flex-basis: 100%;
+
+        p {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .submit {
+    width: 150px;
+    align-self: flex-end;
+    background: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: base.$primary-font-family;
+    color: base.$color-primary-dark;
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}

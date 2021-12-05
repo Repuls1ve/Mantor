@@ -16,7 +16,6 @@ export type vendorSorted = {
 export class ProductComponent implements OnInit {
   vendorSorted: vendorSorted[] = []
   @Input() title?: IProduct['title']
-  @Input() image?: any
   @Input() product!: sorted
 
   constructor(public media: MediaObserver) {}
