@@ -1,0 +1,35 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.shop {
+  border-left: 16px solid rgba(255, 255, 255, 0.3);
+  padding-left: 30px;
+  margin-bottom: 45px;
+  color: white;
+
+  h3 {
+    font-family: base.$secondary-font-family;
+    font-size: 1.5rem;
+  }
+
+  small {
+    font-family: base.$secondary-font-family;
+    font-weight: normal;
+  }
+
+  table {
+    margin-top: 7px;
+    tr {
+      th,
+      td {
+        font-family: base.$secondary-font-family;
+        font-weight: normal;
+        text-align: left;
+      }
+
+      td {
+        padding-left: 20px;
+      }
+    }
+  }
+}

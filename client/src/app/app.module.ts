@@ -14,6 +14,10 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
 import { PartnershipComponent } from './pages/partnership/partnership.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { InputComponent } from './components/input/input.component';
+import { ShopsComponent } from './pages/shops/shops.component';
+import { AgmCoreModule } from '@agm/core';
+import { environment } from 'src/environments/environment';
+import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -26,15 +30,20 @@ import { InputComponent } from './components/input/input.component';
     CatalogComponent,
     PartnershipComponent,
     FeedbackComponent,
-    InputComponent
+    InputComponent,
+    ShopsComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({
+      apiKey: `${environment.mapApi}`
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

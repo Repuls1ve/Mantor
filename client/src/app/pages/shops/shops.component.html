@@ -1,0 +1,32 @@
+<app-header (onSidebarToggle)="onSidebarToggle($event)"></app-header>
+<div class="content" [class.blurred]="blurActive">
+    <main>
+        <agm-map [latitude]="56.0093989" [longitude]="61.5523248" [zoom]="6">
+
+            <agm-marker
+            *ngFor="let shop of shops"
+            [latitude]="shop.coordinates.latitude"
+            [longitude]="shop.coordinates.longitude"
+            ></agm-marker>
+        </agm-map>
+        <div class="shops">
+            <section
+            *ngFor="let shopGroup of sortedShops"
+            class="city-shops-group"
+            >
+                <h2>{{shopGroup.city}}</h2>
+                <div class="city-shops">
+                    <app-shop
+                    *ngFor="let shop of shopGroup.shops"
+                    [shop]="shop"
+                    >
+                    </app-shop>
+                </div>
+            </section>
+        </div>
+        <div class="partnership">
+            <a routerLink="/partnership">Стать официальным магазином MANTOR</a>
+        </div>
+    </main>
+</div>
+<app-footer></app-footer>

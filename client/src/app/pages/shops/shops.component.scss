@@ -1,0 +1,64 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.blurred {
+  filter: blur(3px);
+}
+
+agm-map {
+  height: 300px;
+}
+
+main {
+  background: radial-gradient(
+    93.42% 103.22% at 50% 0%,
+    #2e4151 0%,
+    #010007 100%
+  );
+}
+
+.shops {
+  display: flex;
+  margin: 45px 2% 0;
+  flex-wrap: wrap;
+
+  h2 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+  }
+
+  .city-shops-group {
+    flex-basis: 50%;
+
+    @include breakpoints.md {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.partnership {
+  display: flex;
+  align-items: center;
+  margin: 0 2%;
+  padding-bottom: 50px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    padding: 7px;
+    color: base.$color-primary-dark;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+
+    @include breakpoints.xs {
+      flex: 1;
+    }
+  }
+}

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost:3000"
+  baseUrl: "http://localhost:3000",
+  mapApi: "AIzaSyA8U0XCc5k2-jvhBs7uCFBgCxwIIGyJocM"
 };
 
 /*

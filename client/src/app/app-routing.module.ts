@@ -4,6 +4,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PartnershipComponent } from './pages/partnership/partnership.component';
+import { ShopsComponent } from './pages/shops/shops.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'partnership',
     component: PartnershipComponent
+  },
+  {
+    path: 'where-to-buy',
+    component: ShopsComponent
   }
 ];
 
@@ -28,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

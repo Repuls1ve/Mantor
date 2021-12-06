@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
 import { IProduct } from 'src/app/models/product.model';
-import { sorted } from 'src/app/pages/catalog/catalog.component';
+import { productSorted } from 'src/app/pages/catalog/catalog.component';
 
 export type vendorSorted = {
   vendor: IProduct['vendor']
@@ -16,7 +16,7 @@ export type vendorSorted = {
 export class ProductComponent implements OnInit {
   vendorSorted: vendorSorted[] = []
   @Input() title?: IProduct['title']
-  @Input() product!: sorted
+  @Input() product!: productSorted
 
   constructor(public media: MediaObserver) {}
 

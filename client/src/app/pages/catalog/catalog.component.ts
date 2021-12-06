@@ -3,7 +3,7 @@ import { MediaObserver } from '@angular/flex-layout';
 import { IProduct } from 'src/app/models/product.model';
 import { ProductsService } from 'src/app/services/products.service';
 
-export type sorted = {
+export type productSorted = {
   title: IProduct['title']
   items: IProduct[]
 }
@@ -14,7 +14,7 @@ export type sorted = {
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent implements OnInit {
-  sortedProducts: sorted[] = []
+  sortedProducts: productSorted[] = []
   blurActive = false
 
   constructor(
