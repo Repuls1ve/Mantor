@@ -19,6 +19,7 @@ import { AgmCoreModule } from '@agm/core';
 import { environment } from 'src/environments/environment';
 import { ShopComponent } from './components/shop/shop.component';
 import { ServiceCentersComponent } from './pages/service-centers/service-centers.component';
+import { WarrantyComponent } from './pages/warranty/warranty.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ServiceCentersComponent } from './pages/service-centers/service-centers
     InputComponent,
     ShopsComponent,
     ShopComponent,
-    ServiceCentersComponent
+    ServiceCentersComponent,
+    WarrantyComponent
   ],
   imports: [
     BrowserModule,

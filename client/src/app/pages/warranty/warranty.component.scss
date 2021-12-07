@@ -1,0 +1,32 @@
+@use "../../../assets/scss/base";
+@use "../../../assets/scss/breakpoints";
+
+.blurred {
+  filter: blur(3px);
+}
+
+.warranty {
+  background-image: url("/assets/images/warranty-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 480px;
+  padding: 40px 2.5%;
+
+  h2 {
+    margin-bottom: 25px;
+    color: white;
+  }
+
+  .descriptions {
+    border-left: 16px solid rgba(255, 255, 255, 0.3);
+    padding-left: 30px;
+
+    p {
+      font-family: base.$secondary-font-family;
+      font-size: 1.5rem;
+      line-height: 40px;
+      color: white;
+    }
+  }
+}

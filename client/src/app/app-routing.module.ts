@@ -6,6 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PartnershipComponent } from './pages/partnership/partnership.component';
 import { ServiceCentersComponent } from './pages/service-centers/service-centers.component';
 import { ShopsComponent } from './pages/shops/shops.component';
+import { WarrantyComponent } from './pages/warranty/warranty.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'service-centers',
     component: ServiceCentersComponent
+  },
+  {
+    path: 'warranty',
+    component: WarrantyComponent
   }
 ];
 
