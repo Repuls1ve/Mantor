@@ -18,6 +18,7 @@ import { ShopsComponent } from './pages/shops/shops.component';
 import { AgmCoreModule } from '@agm/core';
 import { environment } from 'src/environments/environment';
 import { ShopComponent } from './components/shop/shop.component';
+import { ServiceCentersComponent } from './pages/service-centers/service-centers.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ShopComponent } from './components/shop/shop.component';
     FeedbackComponent,
     InputComponent,
     ShopsComponent,
-    ShopComponent
+    ShopComponent,
+    ServiceCentersComponent
   ],
   imports: [
     BrowserModule,

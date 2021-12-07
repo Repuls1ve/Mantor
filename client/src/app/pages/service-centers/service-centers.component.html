@@ -1,0 +1,31 @@
+<app-header (onSidebarToggle)="onSidebarToggle($event)"></app-header>
+<div class="content" [class.blurred]="blurActive">
+    <main>
+        <agm-map [latitude]="56.0093989" [longitude]="61.5523248" [zoom]="6">
+            <agm-marker
+            *ngFor="let center of centers"
+            [latitude]="center.coordinates.latitude"
+            [longitude]="center.coordinates.longitude"
+            ></agm-marker>
+        </agm-map>
+        <div class="service-centers">
+            <section
+            *ngFor="let centersGroup of sortedCenters"
+            class="city-centers-group"
+            >
+                <h2>{{centersGroup.city}}</h2>
+                <div class="city-centers">
+                    <app-shop
+                    *ngFor="let center of centersGroup.centers"
+                    [shop]="center"
+                    >
+                    </app-shop>
+                </div>
+            </section>
+        </div>
+        <div class="partnership">
+            <a routerLink="/partnership">Получи статус сервисного центра</a>
+        </div>
+    </main>
+</div>
+<app-footer></app-footer>

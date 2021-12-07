@@ -4,6 +4,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PartnershipComponent } from './pages/partnership/partnership.component';
+import { ServiceCentersComponent } from './pages/service-centers/service-centers.component';
 import { ShopsComponent } from './pages/shops/shops.component';
 
 const routes: Routes = [
@@ -24,8 +25,12 @@ const routes: Routes = [
     component: PartnershipComponent
   },
   {
-    path: 'where-to-buy',
+    path: 'shops',
     component: ShopsComponent
+  },
+  {
+    path: 'service-centers',
+    component: ServiceCentersComponent
   }
 ];
 

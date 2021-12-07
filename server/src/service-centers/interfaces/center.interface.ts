@@ -1,9 +1,6 @@
-export type coordinates = {
-    longitude: number
-    latitude: number
-}
+import { coordinates } from 'src/shops/interfaces/shop.interface';
 
-export interface IShop {
+export interface IServiceCenter {
     title: string
     address: {
         city: string

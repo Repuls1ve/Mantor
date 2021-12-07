@@ -1,4 +1,4 @@
-export type coorditanes = {
+export type coordinates = {
     longitude: number
     latitude: number
 }
@@ -11,5 +11,5 @@ export interface IShop {
     }
     phone: string
     email: string
-    coordinates: coorditanes
+    coordinates: coordinates
 }
